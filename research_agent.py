@@ -104,5 +104,7 @@ app = graph.compile()
 
 
 if __name__=="__main__":
-    result = app.invoke({"topic": "impact of remote work on commercial real estate"})
-    print(result)
+    result = app.invoke({"topic": "Is AI killing software Engineering"})
+    # print(result)
+    with open("result.txt", 'w') as file:
+        file.write(result['brief'])
